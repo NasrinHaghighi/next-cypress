@@ -18,6 +18,14 @@ describe('subscribe form', () => {
     cy.contains(/Invalid email: ns.ha@gmail.io!/i).should('exist')
     cy.wait(3000)
     cy.contains(/Invalid email: ns.ha@gmail.io!/i).should('not.exist')
+
+
+
+    cy.contains(/fail!/i).should('not.exist')
+    cy.getDataTest('subscribe-button').click()
+    cy.debug();
+    cy.contains(/fail!/i).should('exist').should('be.visible')
+    cy.wait(3000)
     })
    
     
