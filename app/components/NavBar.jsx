@@ -1,5 +1,7 @@
-import NavItem from "./NavItem"
+'use client'
 
+import NavItem from "./NavItem"
+import { usePathname } from 'next/navigation';
 const navItems = [
     {
     label: 'Why Cypress?',
@@ -39,13 +41,18 @@ const navItems = [
 ]
 
 export default function NavBar(){
+    const pathname = usePathname();
+    //console.log(pathname)
     return (
+        <>
+        {pathname !== '/addProduct' &&
         <ul className="nav-bar">
             {
                 navItems.map((item)=> (
                     <NavItem key={item.label} label={item.label} dataTest={item.dataTest} path={item.path} />
                 ))
             }
-        </ul>
+        </ul> }
+        </>
     )
 }

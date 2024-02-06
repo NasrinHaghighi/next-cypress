@@ -18,13 +18,13 @@ async function AddnewProduct(e) {
 
 }
   return (
-    <div style={{margin: 'auto', width: '30%'}}>
+    <div data-test='add-Product-box' style={{margin: 'auto', width: '30%'}}>
       <form action={AddnewProduct}>
         <input type="text" name="title" />
         <br/>
         <input type="text" name="price" />
         <br/>
-        <button type="submit">Add Product</button>
+        <button data-test='add-Product-btn' type="submit">Add Product</button>
       </form>
       <div>
       {data.map((item)=>{
