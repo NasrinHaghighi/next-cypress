@@ -1,6 +1,6 @@
 import ItemsAccordion from '../components/Accordion'
 import styles from './fundamentals.module.css'
-
+import { Suspense } from 'react'
 const items = [
     {
       summary: 'Fundamental 1) Describe blocks',
@@ -63,14 +63,17 @@ const items = [
     
   ]
 
-export default function FundamentalsPage(){
+export default async function FundamentalsPage(){
+  await new Promise(resolve => setTimeout(resolve, 3000))
     return (
         <main className={styles.main}>
             <h1 data-test="fundemental-header"
             className={styles.header}>
                 Testing Fundamentals
             </h1>
-            <ItemsAccordion items={items} />
+            <Suspense fallback={<loading />}>
+  <ItemsAccordion items={items} />
+            </Suspense>
         </main>
     )
 }

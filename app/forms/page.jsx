@@ -32,7 +32,8 @@ const items = [
       },
   ]
 
-export default function FormsPage(){
+export  default  function FormsPage(){
+   
     const [inputValue, setInputValue] = useState('')
     const [subMessage, setSubMessage] = useState('')
     return (

@@ -1,6 +1,9 @@
+'use client'
 import ItemsAccordion from '../components/Accordion'
 import styles from './bestPractices.module.css'
+import WithAuth from '../components/withAuth'
 
+import { Suspense } from 'react'
 const items = [
     {
       summary: 'Best Practice #1) Test unhappy paths',
@@ -64,8 +67,10 @@ const items = [
     },
 ]
 
-export default function BestPracticesPage(){
+async function BestPracticesPage(){
+   
     return (
+        
         <main className={styles.main}>
             <h1 className={styles.header}>
                 Best Practices (recommended by Cypress)
@@ -74,3 +79,4 @@ export default function BestPracticesPage(){
         </main>
     )
 }
+export default WithAuth(BestPracticesPage) 

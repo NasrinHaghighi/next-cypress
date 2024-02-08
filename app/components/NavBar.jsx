@@ -38,6 +38,11 @@ const navItems = [
         path: '/best-practices',
         dataTest:'best-practices'
     },
+    {
+        label: 'ServerSide',
+        path: '/serverSide',
+        dataTest:'serverSide'
+    },
 ]
 
 export default function NavBar(){

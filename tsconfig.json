@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/addProduct/nasrin/[productid]/review/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
