@@ -34,6 +34,8 @@ describe('contact page', () => {
 
     cy.getDataTest('email-input').type('ns.ha@gmail.com')
     cy.getDataTest('submit-btn').click()
-    cy.contains(/correct email/i).should('exist',  { timeout: 40000 })
+    cy.contains(/correct email/i).should('exist')
+
+    
   })
 })

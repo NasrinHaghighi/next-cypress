@@ -43,6 +43,16 @@ const navItems = [
         path: '/serverSide',
         dataTest:'serverSide'
     },
+    {
+        label: 'Parallel',
+        path: '/parallel',
+        dataTest:'parallel'
+    },
+    {
+        label: 'addProduct',
+        path: '/addProduct',
+        dataTest:'addProduct'
+    },
 ]
 
 export default function NavBar(){
