@@ -53,6 +53,11 @@ const navItems = [
         path: '/addProduct',
         dataTest:'addProduct'
     },
+    {
+        label: 'Photos',
+        path: '/photos',
+        dataTest:'photos'
+    },
 ]
 
 export default function NavBar(){

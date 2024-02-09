@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutPage() {
   return (
-    <div>About    Page</div>
+    <div className="text-3xl font-bold underline">About    Page</div>
   )
 }
 
